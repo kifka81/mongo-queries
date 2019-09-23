@@ -7,16 +7,21 @@ Practice the following queries:
 db.restaurantes.find({"restaurant_id": "30112340"})
 ```  
 * Find May May Kitchen.
-  - db.restaurantes.find({"name": "May May Kitchen"})
-  
+```diff
+db.restaurantes.find({"name": "May May Kitchen"})
+``` 
 * Find the restaurants where their cuisine is Tapas.
-  - db.restaurantes.find({"cuisine": "Tapas"}).pretty()
-  
+```diff
+db.restaurantes.find({"cuisine": "Tapas"}).pretty()
+``` 
 * Find the restaurants in postal code 11208.
-  - db.restaurantes.find({"address.zipcode": "11208"}).pretty()
-  
+```diff
+db.restaurantes.find({"address.zipcode": "11208"}).pretty()
+``` 
 * Find all restaurants that have a score greater or equal than 70.
-  - 
+```diff
+``` 
+
 * Find all restaurants in Brooklynthat have a score greater than 80
 * All restaurants with Chilean or Czech cuisine.
 * All restaurants with grade A in second position of the array.
