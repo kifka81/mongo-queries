@@ -20,10 +20,11 @@ db.restaurantes.find({"address.zipcode": "11208"}).pretty()
 ``` 
 * Find all restaurants that have a score greater or equal than 70.
 ```diff
--dfsds
+db.restaurantes.find({"grades.score": {$gte: 70}}).pretty()
 ``` 
-* Find all restaurants in Brooklynthat have a score greater than 80
+* Find all restaurants in Brooklyn "grades.scorethat have a score greater than 80
 ```diff
+
 ``` 
 * All restaurants with Chilean or Czech cuisine.
 ```diff
