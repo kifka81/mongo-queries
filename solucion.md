@@ -7,8 +7,9 @@
 Practice the following queries:
 
 * Find the restaurant with id 30112340.
-  - #db.restaurantes.find({"restaurant_id": "30112340"})
-  
+```diff
+# - db.restaurantes.find({"restaurant_id": "30112340"})
+```  
 * Find May May Kitchen.
   - db.restaurantes.find({"name": "May May Kitchen"})
   
