@@ -20,12 +20,26 @@ db.restaurantes.find({"address.zipcode": "11208"}).pretty()
 ``` 
 * Find all restaurants that have a score greater or equal than 70.
 ```diff
+-dfsds
 ``` 
-
 * Find all restaurants in Brooklynthat have a score greater than 80
+```diff
+``` 
 * All restaurants with Chilean or Czech cuisine.
+```diff
+``` 
 * All restaurants with grade A in second position of the array.
+```diff
+``` 
 * All restaurants with grades A or B.
+```diff
+``` 
 * All restaurants that have a review made in 2014-09-16.
+```diff
+``` 
 * All restaurant their cuisine is Tapas ordered by name in ascending (normal) order.
+```diff
+``` 
 * How many restaurants have been graded after 2015-01-01.
+```diff
+``` 
