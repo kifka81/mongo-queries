@@ -22,7 +22,7 @@ db.restaurantes.find({"address.zipcode": "11208"}).pretty()
 ```diff
 db.restaurantes.find({"grades.score": {$gte: 70}}).pretty()
 ``` 
-* Find all restaurants in Brooklyn "grades.scorethat have a score greater than 80
+* Find all restaurants in Brooklyn "grades.score that have a score greater than 80
 ```diff
 db.restaurantes.find({$and:[{"borough": "Brooklyn"},{"grades.score": {$gte: 80}}]}).pretty()
 ``` 
@@ -32,17 +32,21 @@ db.restaurantes.find({$or: [{"cuisine": "Chilean"},{"cuisine": "Czech"}]})
 ``` 
 * All restaurants with grade A in second position of the array.
 ```diff
-
+-db.restaurantes.find({"grades.1": {"grade": "A"}}).pretty()
 ``` 
 * All restaurants with grades A or B.
 ```diff
+db.restaurantes.find({$or: [{"grades.grade": "A"},{"grades.grade": "B"}]}).pretty()
 ``` 
 * All restaurants that have a review made in 2014-09-16.
 ```diff
+db.restaurantes.find({"grades.date": {$gte: new Date("2014-09-16T00:00:00.000Z")}}).pretty()
 ``` 
 * All restaurant their cuisine is Tapas ordered by name in ascending (normal) order.
 ```diff
+db.restaurantes.find({"cuisine": "Tapas"}).sort({"name": 1}).pretty()
 ``` 
 * How many restaurants have been graded after 2015-01-01.
 ```diff
+
 ``` 
