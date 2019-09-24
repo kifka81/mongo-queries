@@ -24,13 +24,15 @@ db.restaurantes.find({"grades.score": {$gte: 70}}).pretty()
 ``` 
 * Find all restaurants in Brooklyn "grades.scorethat have a score greater than 80
 ```diff
-
+db.restaurantes.find({$and:[{"borough": "Brooklyn"},{"grades.score": {$gte: 80}}]}).pretty()
 ``` 
 * All restaurants with Chilean or Czech cuisine.
 ```diff
+db.restaurantes.find({$or: [{"cuisine": "Chilean"},{"cuisine": "Czech"}]})
 ``` 
 * All restaurants with grade A in second position of the array.
 ```diff
+
 ``` 
 * All restaurants with grades A or B.
 ```diff
